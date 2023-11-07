@@ -225,6 +225,7 @@ public class ModelMapperManager implements ModelMapperService{
 }
 ```
 Manager icindeki özellikle List(listeleme),add(ekleme) ve update(guncelleme) islemlerinde 
+```
 /*
     * List<GetAllBrandsResponse> brandResponse = new
     * ArrayList<GetAllBrandsResponse>(); for(Brand brand:brands) {
@@ -232,5 +233,6 @@ Manager icindeki özellikle List(listeleme),add(ekleme) ve update(guncelleme) is
     * responseItem.setId(brand.getId()); responseItem.setName(brand.getName());
     * brandResponse.add(responseItem); }
 */
+```
 Bu sekilde cok sayıda kod yazmak yerine birbirine benzeyen nesneleri örnegin Sirket'i GetAllSirketResponse'a çevirmek için Mapper'ları kullanırız. 
 
