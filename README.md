@@ -1,4 +1,4 @@
-# Java_Spring_Uygulamas-
+# Java_Spring_Uygulamasi-
 Java Spring Boot ile bir RestApi Projesi
 ## Proje için Gerekli Teknolojiler
 ## 1. Spring-Boot projesi için Temel Dosyalar
@@ -342,4 +342,110 @@ Manager icindeki özellikle List(listeleme),add(ekleme) ve update(guncelleme) is
 */
 ```
 Bu sekilde cok sayıda kod yazmak yerine birbirine benzeyen nesneleri örnegin Sirket'i GetAllSirketResponse'a çevirmek için Mapper'ları kullanırız. 
+## Controller Sınıfları OLuşturma
+#### SirketController
+```
+package yazilim.io.oktaSoftwareCompany.controllers;
 
+import java.util.List;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.RestController;
+
+import jakarta.validation.Valid;
+import lombok.AllArgsConstructor;
+import yazilim.io.oktaSoftwareCompany.business.abstracts.SirketService;
+import yazilim.io.oktaSoftwareCompany.business.request.CreateSirketRequest;
+import yazilim.io.oktaSoftwareCompany.business.request.UpdateSirketRequest;
+import yazilim.io.oktaSoftwareCompany.business.response.GettAllSirketResponse;
+
+
+@RestController
+@RequestMapping("/api/sirket") //Ana Yol
+@AllArgsConstructor
+public class SirketControllers {
+	private SirketService sirketService;
+	
+	@GetMapping()
+	public List<GettAllSirketResponse> getAll() {
+		return sirketService.getAll();
+	}
+	
+	@PostMapping()
+	@ResponseStatus(code = HttpStatus.CREATED)
+	public void add(@RequestBody() @Valid() CreateSirketRequest createSirektRequest) {
+		this.sirketService.add(createSirektRequest);
+	}
+	
+	@PutMapping
+	public void update(@RequestBody() UpdateSirketRequest updateSirketRequest) {
+		this.sirketService.update(updateSirketRequest);
+	}
+	
+	@DeleteMapping("/{id}")
+	public void delete(@PathVariable int id) {
+		this.sirketService.delete(id);
+	}
+}
+
+```
+#### CalisanController
+```
+package yazilim.io.oktaSoftwareCompany.controllers;
+
+import java.util.List;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.RestController;
+
+import lombok.AllArgsConstructor;
+import yazilim.io.oktaSoftwareCompany.business.abstracts.CalisanService;
+import yazilim.io.oktaSoftwareCompany.business.request.CreateCalisanRequest;
+import yazilim.io.oktaSoftwareCompany.business.request.UpdateCalisanRequest;
+import yazilim.io.oktaSoftwareCompany.business.response.GetAllCalisanResponse;
+
+@RestController
+@RequestMapping("/api/calisan") //Ana Yol
+@AllArgsConstructor
+public class CalisanController {
+	private CalisanService calisanService;
+	
+	@GetMapping()
+	public List<GetAllCalisanResponse> getAll() {
+		return calisanService.getAll();
+	}
+	
+	@PostMapping()
+	@ResponseStatus(code = HttpStatus.CREATED)
+	public void add(@RequestBody() CreateCalisanRequest createCalisanRequest) {
+		this.calisanService.add(createCalisanRequest);
+	}
+	
+	@PutMapping
+	public void update(@RequestBody() UpdateCalisanRequest updateCalisanRequest) {
+		this.calisanService.update(updateCalisanRequest);
+	}
+	
+	@DeleteMapping("/{id}")
+	public void delete(@PathVariable int id) {
+		this.calisanService.delete(id);
+	}
+}
+
+```
