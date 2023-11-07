@@ -26,7 +26,114 @@ Sirket ve Calisan adında iki tane Model ekledik.
 Modellerdeki getter,setter constructor'lar gibi metotları lombok sayesinde sınıftaki kodları uzamadan halletmiş olduk.
 ## DataAccess'lerimiz olan Repositorileri Olusturma
 Repositories package'ının altında oluşturuldu. Her bir repository JpaRepository'i extends ettirerek Jpa Tarafından bize sql tarafı için birçok hazır yapı gelmekte
-## Serviceler ve Bu servicelerin iş kuraları olan Manager sınıflarını Olusturma
+## Request ve Response'lar Olusturma
+Buradaki onemli noktalardan birisi de id gibi bilgileri vs. Gostermemek ve gerekirse ,istek ve cevaplar icin ayrı ayrı metotlar olusturmak ,isteginize gore cevaplarınızı donebilir, isteginize gore isteklerinizi belirleyebilmek icin Boyle bir islem gerceklestirildi..
+##### Request 'ler
+```
+package yazilim.io.oktaSoftwareCompany.business.request;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class CreateCalisanRequest {
+	private String firstName;
+	private String lastName;
+	private String position;
+	
+	private int sirketId;
+}
+
+```
+```
+package yazilim.io.oktaSoftwareCompany.business.request;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class CreateSirketRequest { // id'yi bilmesine gerek yok son kullanıcının
+	private String name;
+
+}
+
+```
+```
+package yazilim.io.oktaSoftwareCompany.business.request;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class UpdateCalisanRequest {
+	private int id;
+	private String position;
+}
+
+```
+```
+package yazilim.io.oktaSoftwareCompany.business.request;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class UpdateSirketRequest {
+	private int id;
+	private String name;
+}
+
+```
+##### Response 'lar
+```
+package yazilim.io.oktaSoftwareCompany.business.response;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class GetAllCalisanResponse {
+	private int id;
+	private String firstName;
+	private String lastName;
+	private String position;
+	private String sirketName;
+}
+
+```
+```
+package yazilim.io.oktaSoftwareCompany.business.response;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class GettAllSirketResponse {
+	private int id;
+	private String name;
+}
+
+```
+## Serviceler ve Bu servicelerin is kuraları olan Manager sınıflarını Olusturma
 İlk olarak CalisanService ve SirketService adında interfacelerimizi oluşturduk ve içerisinde Crud işlem metotlarını ekledik.
 Daha sonra ise Crud islem metotlarını CalisanManager ve SirketManager da iş kurallarımızı yazıp Halletmiş olduk.
 -- CalisanService --
