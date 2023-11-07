@@ -29,6 +29,6 @@ public class Sirket {
 	@Column(name="name")
 	private String name;
 	
-	@OneToMany(mappedBy = "sirket") // mappedBy = "brand" buradaki brand model varlığındaki  private Brand brand; olarak tanımlanmış olan 'brand' den gelir ilişkilendirilmesi.
+	@OneToMany(mappedBy = "sirket") // mappedBy = "sirket" buradaki sirket model varlığındaki  private Sirket sirket; olarak tanımlanmış olan 'sirket' den gelir ilişkilendirilmesi.
 	List<Calisan> calisanlar;
 }
