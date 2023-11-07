@@ -450,9 +450,53 @@ public class CalisanController {
 
 ```
 ## Projemizi Çalıstıralım Ve Postman Uzerinden Test Edelim...
+#### Sirket icin Yapalım
 GET: localhost:8081/api/sirket
+#### //RESPONSE
 ![GetSirket](https://github.com/okanokta/Java_Spring_Uygulamas-/assets/100216485/e24f3054-ba98-420c-ab09-5bba00ebd761)
 Sonuc:
 ![GetSirketSonuc](https://github.com/okanokta/Java_Spring_Uygulamas-/assets/100216485/5074904d-fd99-43b4-97ae-a2147b368928)
+#### //REQUEST
+Burada name alanını Guncelleme islemine tabi tuttuk..
+PUT: localhost:8081/api/sirket
+![PUTSirket](https://github.com/okanokta/Java_Spring_Uygulamas-/assets/100216485/62baaa7d-1d92-4980-84cb-5b6e30a36b46)
+Sonuc: 
+![PutSirketSonuc](https://github.com/okanokta/Java_Spring_Uygulamas-/assets/100216485/6cfa4a27-2998-4fab-8212-fc8b192bcd38)
+#### //REQUEST
+POST: localhost:8081/api/sirket
+![PostSirket](https://github.com/okanokta/Java_Spring_Uygulamas-/assets/100216485/ba2709b3-c12e-488b-a140-5353eefd0b98)
+Sonuc:
+![PostSirketSonuc](https://github.com/okanokta/Java_Spring_Uygulamas-/assets/100216485/6cb29dd1-3761-4a6e-8438-9a56aa9b9913)
+
+DELETE: localhost:8081/api/sirket
+![DelSirket](https://github.com/okanokta/Java_Spring_Uygulamas-/assets/100216485/4c3c91a3-7d40-48f5-8928-636e0f993860)
+Sonuc:
+![DelSirketSonuc](https://github.com/okanokta/Java_Spring_Uygulamas-/assets/100216485/73e4771c-7edf-4df0-960d-5784b23956ad)
+### Calisan icin Yapalım
+GET: localhost:8081/api/calisan
+#### //RESPONSE
+Sonuc:
+![GetCalisan](https://github.com/okanokta/Java_Spring_Uygulamas-/assets/100216485/f6d34994-407d-4522-a4d9-2470eda5a14d)
+#### //REQUEST
+POST: localhost:8081/api/calisan
+![PostCalisan](https://github.com/okanokta/Java_Spring_Uygulamas-/assets/100216485/9152075c-c18a-4fc9-8ccf-77b629a9fa7c)
+Sonuc:
+![PostCaliSonuc](https://github.com/okanokta/Java_Spring_Uygulamas-/assets/100216485/936ec932-33cd-4f22-b295-e6df907686f2)
+#### //REQUEST
+Burada position alanını Guncelleme islemine tabi tuttuk..
+PUT: localhost:8081/api/calisan
+![PutCalisan](https://github.com/okanokta/Java_Spring_Uygulamas-/assets/100216485/681e9472-f10a-41e6-8907-90da1857a067)
+
+DELETE: localhost:8081/api/sirket
+![DelCalisan](https://github.com/okanokta/Java_Spring_Uygulamas-/assets/100216485/f9897a82-16ae-43af-861e-5d5965b3ffa6)
+
+Sonuc:
+![DelCalSonuc](https://github.com/okanokta/Java_Spring_Uygulamas-/assets/100216485/5a407047-c9a4-4794-a17d-f75442458f11)
+
+
+
+
+
+
 
 
