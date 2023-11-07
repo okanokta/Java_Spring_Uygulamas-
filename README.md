@@ -10,7 +10,8 @@ PostgreSQL'in kurulu olması lazım Bende Daha önceden Kurulu oldugundan sizde 
 Spring.io da Generate ettigimiz dosyayı zip'den iligili klasöre çıkartıp Eclipse'den asagıdaki ekran goruntusunde oldugu gibi import ettikten sonra proje ayaga kalkacaktır.
 ![Ayağa_Kaldırma](https://github.com/okanokta/Java_Spring_Uygulamas-/assets/100216485/f4deef53-5cff-4527-8b6d-cb7ab59bf707)
 ## Spring Uygulamamıza Veritabanı Baglantısı
-# . VeriTabanı Bağlantısı ve Port Seçimi -main/resources/application.properties
+#### . VeriTabanı Bağlantısı ve Port Seçimi -main/resources/application.properties
+```
 spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.PostgreSQLDialect
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.hibernate.show-sql=true
@@ -19,4 +20,6 @@ spring.datasource.username=postgres
 spring.datasource.password=12345
 spring.jpa.properties.javax.persistence.validation.mode = none
 server.port=8081
+```
+
 
