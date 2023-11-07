@@ -449,3 +449,10 @@ public class CalisanController {
 }
 
 ```
+## Projemizi Çalıstıralım Ve Postman Uzerinden Test Edelim...
+GET: localhost:8081/api/sirket
+![GetSirket](https://github.com/okanokta/Java_Spring_Uygulamas-/assets/100216485/e24f3054-ba98-420c-ab09-5bba00ebd761)
+Sonuc:
+![GetSirketSonuc](https://github.com/okanokta/Java_Spring_Uygulamas-/assets/100216485/5074904d-fd99-43b4-97ae-a2147b368928)
+
+
