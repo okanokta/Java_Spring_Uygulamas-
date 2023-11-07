@@ -15,11 +15,11 @@ Spring.io da Generate ettigimiz dosyayı zip'den iligili klasöre çıkartıp Ec
 spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.PostgreSQLDialect
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.hibernate.show-sql=true
-spring.datasource.url=jdbc:postgresql://localhost:5432/softwareCompany
-spring.datasource.username=postgres
-spring.datasource.password=12345
-spring.jpa.properties.javax.persistence.validation.mode = none
-server.port=8081
+spring.datasource.url=jdbc:postgresql://localhost:5432/softwareCompany #softwareCompany veritabanı adımız oluyor
+spring.datasource.username=postgres   #MySQL kullanıcı adı
+spring.datasource.password=12345      #Şifresi
+spring.jpa.properties.javax.persistence.validation.mode = none  
+server.port=8081 #Api için port 
 ```
 
 
