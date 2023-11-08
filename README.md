@@ -468,7 +468,7 @@ POST: localhost:8081/api/sirket
 Sonuc:
 ![PostSirketSonuc](https://github.com/okanokta/Java_Spring_Uygulamas-/assets/100216485/6cb29dd1-3761-4a6e-8438-9a56aa9b9913)
 
-DELETE: localhost:8081/api/sirket
+DELETE: localhost:8081/api/sirket/{id}
 ![DelSirket](https://github.com/okanokta/Java_Spring_Uygulamas-/assets/100216485/4c3c91a3-7d40-48f5-8928-636e0f993860)
 Sonuc:
 ![DelSirketSonuc](https://github.com/okanokta/Java_Spring_Uygulamas-/assets/100216485/73e4771c-7edf-4df0-960d-5784b23956ad)
@@ -487,7 +487,7 @@ Burada position alanını Guncelleme islemine tabi tuttuk..
 PUT: localhost:8081/api/calisan
 ![PutCalisan](https://github.com/okanokta/Java_Spring_Uygulamas-/assets/100216485/681e9472-f10a-41e6-8907-90da1857a067)
 
-DELETE: localhost:8081/api/sirket
+DELETE: localhost:8081/api/sirket/{id}
 ![DelCalisan](https://github.com/okanokta/Java_Spring_Uygulamas-/assets/100216485/f9897a82-16ae-43af-861e-5d5965b3ffa6)
 
 Sonuc:
